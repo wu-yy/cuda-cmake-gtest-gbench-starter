@@ -11,7 +11,12 @@ template without CUDA support.
 On Linux/Unix, to build and make the test:
 
     $ mkdir build && cd $_
-    $ cmake ..
+    $ cmake .. \
+-DCMAKE_CXX_COMPILER=/usr/bin/g++ \
+-DCMAKE_CUDA_COMPILER=/usr/local/cuda/bin/nvcc \
+-DCMAKE_CUDA_ARCHITECTURES="75"
+
+
     $ make
 
 CUDA is strict about compiler version, on UNIX, cmake will honor the CXX
