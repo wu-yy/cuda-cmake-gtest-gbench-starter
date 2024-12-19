@@ -10,6 +10,7 @@ template without CUDA support.
 
 On Linux/Unix, to build and make the test:
 
+```
     $ mkdir build && cd $_
     $ cmake .. \
 -DCMAKE_CXX_COMPILER=/usr/bin/g++ \
@@ -18,6 +19,8 @@ On Linux/Unix, to build and make the test:
 
 
     $ make
+
+```
 
 CUDA is strict about compiler version, on UNIX, cmake will honor the CXX
 variable, so for example to use gcc 11 you can write (before calling cmake):
